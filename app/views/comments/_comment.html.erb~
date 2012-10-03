@@ -1,10 +1,6 @@
 <%= div_for comment do %>
-<p>
-    <b>Name:</b>
-    <%= comment.name %>
- </p>
 <p><strong>
-Posted <%= time_ago_in_words(comment.created_at) %>
+Posted <%= time_ago_in_words(comment.created_at) %> by <%= h(comment.author_name) %>
 </strong><br />
 <%= h(comment.body) %>
 </p>
