@@ -89,5 +89,14 @@ def authenticate
 authenticate_or_request_with_http_basic do |name, password|
 name == "admin" && password == "secret"
 end
+
+def create
+if user = Post.authenticate(params[:author_name], params[:password])
+session[:post_id] = post_id
+redirect_to edit_posts_url
+else
+redirect_to show_posts_url, :alert => "Invalid user/password combination"
+end
+
 end
 

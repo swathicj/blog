@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121003235100) do
+ActiveRecord::Schema.define(:version => 20121004003329) do
 
   create_table "comments", :force => true do |t|
     t.integer  "post_id"
@@ -21,12 +21,7 @@ ActiveRecord::Schema.define(:version => 20121003235100) do
     t.string   "comment_author"
   end
 
-  create_table "posts", :force => true do |t|
-    t.string   "title"
-    t.text     "body"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-    t.string   "author_name"
-  end
+# Could not dump table "posts" because of following StandardError
+#   Unknown type 'password' for column 'password'
 
 end
