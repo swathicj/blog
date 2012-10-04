@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name, "Author" %><br />
+    <%= f.label :author_name, "Author" %><br />
     <%= f.text_field :author_name %><br />
 
     <%= f.label :title %><br />
